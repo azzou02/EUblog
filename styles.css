@@ -1,8 +1,10 @@
+/* Load Custom Font */
 @font-face {
     font-family: "Providence";
     src: url('fonts/Providence-Sans.otf');
 }
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +17,12 @@ body {
     color: #080808;
 }
 
+/* Container for nav bar */
 .container {
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-top: 20px;
+    padding: 20px 40px 0 40px;
 }
 
+/* Navigation Styling */
 nav {
     display: flex;
     flex-direction: row;
@@ -39,26 +41,81 @@ nav li {
     margin-right: 10px;
 }
 
+nav a {
+    text-decoration: none;
+    color: #080808;
+    font-weight: bold;
+}
+
+/* Blog Title */
 #title {
     padding: 50px 0 30px 50px;
 }
 
-.gallery {
-    border: 1px solid #ccc;
+#title h1 {
+    font-size: 2.5rem;
 }
 
-.gallery img {
+/* Full-Width Day Sections */
+.responsive {
     width: 100%;
-    height: auto;
-}  
+    padding: 60px 40px;
+    box-sizing: border-box;
+    clear: both;
+    background-color: #fff8ed;
+    border-top: 1px solid #e0d6c9;
+}
 
-.desc {
-    padding: 15px;
+.responsive:nth-of-type(even) {
+    background-color: #fff1dc;
+}
+
+.responsive h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* Gallery Layout – Multi-Image Row */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.media-block {
+    width: 300px;
     text-align: center;
 }
 
-.responsive {
-    padding-left: 50px;
-    float: left;
-    width: 24.99999%;
+.media-block img,
+.media-block video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Description Text */
+.desc {
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .media-block {
+        width: 100%;
+    }
+
+    .responsive {
+        padding: 40px 20px;
+    }
+
+    #title {
+        padding: 40px 20px;
+    }
 }
