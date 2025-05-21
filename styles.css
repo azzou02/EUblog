@@ -56,6 +56,7 @@ nav a {
     font-size: 2.5rem;
 }
 
+
 /* Full-Width Day Sections */
 .responsive {
     width: 100%;
@@ -74,6 +75,12 @@ nav a {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2rem;
+}
+
+.responsive h3{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
 }
 
 /* Gallery Layout – Multi-Image Row */
@@ -119,3 +126,42 @@ nav a {
         padding: 40px 20px;
     }
 }
+
+.carousel {
+    position: relative;
+    max-width: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+

@@ -91,7 +91,7 @@
             </div>
             <div class="media-block">
                 <img src="images/Day 2_Dinner CHINESE.jpg" alt="Chinese Food in Europe Really..." width="600" height="400">
-                <div class="desc"></div>
+                <div class="desc">Well for dinner Allison got Chinese food, from my look you can see that I'm totally not judging ahaha!</div>
             </div>
         </div>
     </div>
@@ -113,7 +113,7 @@
             </div>
             <div class="media-block">
                 <video src="images/Day 3_Marie's Playhouse.mp4" width="600" height="400" controls></video>
-                <div class="desc">Well for dinner Allison got Chinese food, from my look you can see that I'm totally not judging ahaha!</div>
+                <div class="desc"></div>
             </div>
         </div>
     </div>
@@ -151,5 +151,137 @@
             </div>
         </div>
     </div>
+
+    <div class="responsive">
+        <h2>Day 5 & 6 - WEEKENDS!!</h2>
+        <h3>Michelle's :D</h3>
+        <div class="gallery">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="images/Michelle Weekend/Lille Shopping.jpeg" alt= "10">
+                    <img src="images/Michelle Weekend/Food.jpeg" alt= "6">
+                     <img src="images/Michelle Weekend/Charles' Maison.jpeg" alt= "4">
+                    <img src="images/Michelle Weekend/Boat.jpeg" alt= "2">
+                    <img src="images/Michelle Weekend/Belgium Chocolate.jpeg"  alt= "1">
+                     <img src="images/Michelle Weekend/Drummers.jpeg" alt= "5">
+                    <img src="images/Michelle Weekend/Castle Bookstore.jpeg" alt= "3">
+                    <img src="images/Michelle Weekend/Mussels.jpeg" alt= "7">
+                    <img src="images/Michelle Weekend/Photo at Grand Place.jpeg" alt= "8">
+                    <img src="images/Michelle Weekend/Vintage Books.jpeg" alt= "9">
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            </div>
+            <div class="desc">Some snipets of my trip to Lille -> Ghent -> Brussels! I love the shopping streets of Lille (perfect for apartment furnishing) and the architecture. I wished I could stay at Ghent a little longer to shop around and buy a piece of artwork from the artists by the river.</div>
+        </div>
+        </div>
+
+        <script>
+         document.addEventListener('DOMContentLoaded', () => {
+        const carousels = document.querySelectorAll('.carousel');
+
+        carousels.forEach(carousel => {
+            const imagesContainer = carousel.querySelector('.carousel-images');
+            const images = imagesContainer.querySelectorAll('img');
+            const prevButton = carousel.querySelector('.carousel-button.prev');
+            const nextButton = carousel.querySelector('.carousel-button.next');
+            let index = 0;
+
+            function updateCarousel() {
+                const width = images[0].clientWidth;
+                imagesContainer.style.transform = `translateX(${-index * width}px)`;
+            }
+
+            nextButton.addEventListener('click', () => {
+                index = (index + 1) % images.length;
+                updateCarousel();
+            });
+
+            prevButton.addEventListener('click', () => {
+                index = (index - 1 + images.length) % images.length;
+                updateCarousel();
+            });
+
+            window.addEventListener('resize', updateCarousel);
+            updateCarousel(); // Initialize
+                });
+             });
+            </script>   
+
+     <div class="responsive">
+        <h2>Day 7 (5/19) - Fragonard Perfume Workshop</h2>
+        <div class="gallery">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="images/Week 2/Day 7_Museum Perfume.jpeg" alt= "10">
+                    <img src="images/Week 2/Day 7_Perfume Making.jpeg" alt= "6">
+                     <img src="images/Week 2/Day 7_Supplies Perfume.jpeg" alt= "4">
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            </div>
+            <div class="desc">After watching the BCC video on perfume and child labor (Jasmine extraction), I've developed more distrust for these big name brands. From the perfume museum tour, I learned that the base coat oil used to be from animals to help with lingering of smell. Now, they've pivoted towards synthetic plant-based or chemically derived methods. I wonder if Jasmine smell could also be replicated. However, I believe that might lead to another flawed system of job scarcity as these Jasmine pickers won't be able to have anymore income sources. All that said, perfume making was really fun! I wish we had more options of smells because I wanted to make my own floral smell.</div>     
+            
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="images/Week 2/Day 7_Roland Garros.jpg" alt= "10">
+                    <img src="images/Week 2/Day 7_Joanna Garland.jpeg" alt= "6">
+                     <img src="images/Week 2/Day 7_Boutique.jpeg" alt= "4">
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            </div>
+            <div class="desc">In the afternoon, Prof. Bloomquist, Ollie, and I (Michelle) went to to Roland Garros. I've never been invested in tennis, but after going there and being able to support Taiwan (Joanna Garland), I think I found a new sport that I must learn how to play. Once the rules made sense, I get the hype!</div>     
+        </div>
+    </div>
+
+     <div class="responsive">
+        <h2>Day 8 (5/20) - Palais Galliera Guided Visit + Guided Tour of Fashion District Mickael Cotte</h2>
+        <div class="gallery">
+           <div class="carousel">
+                <div class="carousel-images">
+                    <img src="images/Week 2/Day 8_Swimsuit.jpeg" alt= "10">
+                    <img src="images/Week 2/Day 8_Tour.jpeg" alt= "6">
+                     <img src="images/Week 2/Day 8_Mark of Fashion Change.jpeg" alt= "4">
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            </div>
+            <div class="desc">Palais Galliera - The evolution of fashion is fascinating. The pieces that stood out to me were the swimsuits and the blue dress. Fun fact about the swimsuit was that for men it originally covered the top too because back in the 1910s, having pale skin was more fashionable. Then when sports become big, having tan skin meant "healthy" and active. The blue freeness of the dress marked a change in women's fashion. It diverges from the need for corset and thight forms.</div>     
+        
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="images/Week 2/Day 8_EmilyInParis.jpeg" alt= "10">
+                    <img src="images/Week 2/Day 8_Marketing.jpeg" alt= "6">
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            </div>
+            <div class="desc">Highlights of the fashion district tour was seeing the Emily In Paris scenes in person but also the different marketing backstories. Life experiences have a great impact in designer's products (e.g. the lid of Chanel No. 5 perfume bottle was inspired by the geometry of Place Vendome). Marketing concept (storyliving) - A big marketing movement that I need fashion brands should implement is cafes!</div>     
+        </div>
+    </div>
+
+     <div class="responsive">
+        <h2>Day 9 (5/21) - Vintage Shopping + Dior Museum</h2>
+        <div class="gallery">
+             <div class="media-block">
+                <img src="images/Week 2/Day 9_Shopping.jpg" width="600" height="400" controls>
+                <div class="desc">I (Michelle) spent the morning going to various vintage shops and walking around the area near the Louvre such as Episode and Alatone. I thought I went to the Kilo shop but apparently it wasn't! So this photo was from the expensive Kilo shop I went into, very aesthetic and has almost anything you need.</div>
+            </div>
+            
+           <div class="carousel">
+                <div class="carousel-images">
+                    <img src="images/Week 2/Day 9_Dior House.jpeg" alt= "dior house">
+                    <img src="images/Week 2/Day 9_Dior.jpeg" alt= "museum">
+                    <img src="images/Week 2/Day 9_Dior Staircase.jpeg" alt= "fav room">
+                    <img src="images/Week 2/Day 9_Fav.jpeg" alt= "staircase">
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
+            <div class="desc">The Dior Museum was incredible. Ive seen various videos about Christian Dior along the lines of "when the designer loves women," and it's true. He accentuates the curves of the women body, elegance, and beauty. If I hadn't read about his life story and design thinking, I would've thought Dior was yet another scame of luxury brands. I find the different Houses and themes a really ingenious marketing concept, there's freshness and surprises that keep people anticipating. My favorite was room 2 with the flowers. I personally am drawn to the elegance and beauty that flower symbolizes.</div>     
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
