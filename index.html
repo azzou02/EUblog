@@ -345,18 +345,59 @@
                 <div class="desc">I (Michelle) spent the morning going to various vintage shops and walking around the area near the Louvre such as Episode and Alatone. I thought I went to the Kilo shop but apparently it wasn't! So this photo was from the expensive Kilo shop I went into, very aesthetic and has almost anything you need.</div>
             </div>
 
-           <div class="carousel">
+            <div class="carousel">
                 <div class="carousel-images">
-                    <img src="images/Week 2/Day 9_Dior House.jpeg" alt= "dior house">
-                    <img src="images/Week 2/Day 9_Dior.jpeg" alt= "museum">
-                    <img src="images/Week 2/Day 9_Dior Staircase.jpeg" alt= "fav room">
-                    <img src="images/Week 2/Day 9_Fav.jpeg" alt= "staircase">
+                    <img src="images/Week 2/day9-onigiri.jpeg" alt= "onigiri">
+                    <img src="images/Week 2/day9-matcha.jpeg" alt="matcha">
                 </div>
                 <button class="carousel-button prev">❮</button>
                 <button class="carousel-button next">❯</button>
-            <div class="desc">The Dior Museum was incredible. Ive seen various videos about Christian Dior along the lines of "when the designer loves women," and it's true. He accentuates the curves of the women body, elegance, and beauty. If I hadn't read about his life story and design thinking, I would've thought Dior was yet another scame of luxury brands. I find the different Houses and themes a really ingenious marketing concept, there's freshness and surprises that keep people anticipating. My favorite was room 2 with the flowers. I personally am drawn to the elegance and beauty that flower symbolizes.</div>     
             </div>
+            <div class="carousel-desc">
+                In the morning I (Alison) went to Les sales voleur and ZXSBN6DD3VZBGSY. I also 
+                got some matcha ice cream and onigiri!
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/Week 2/Day 9_Dior House.jpeg" alt= "dior house">
+                        <img src="images/Week 2/Day 9_Dior.jpeg" alt= "museum">
+                        <img src="images/Week 2/Day 9_Dior Staircase.jpeg" alt= "fav room">
+                        <img src="images/Week 2/Day 9_Fav.jpeg" alt= "staircase">
+                    </div>
+                    <button class="carousel-button prev">❮</button>
+                    <button class="carousel-button next">❯</button>
+                </div>
+                <div class="carousel-desc">The Dior Museum was incredible. Ive seen various videos about Christian Dior along the lines of "when the designer loves women," and it's true. He accentuates the curves of the women body, elegance, and beauty. If I hadn't read about his life story and design thinking, I would've thought Dior was yet another scame of luxury brands. I find the different Houses and themes a really ingenious marketing concept, there's freshness and surprises that keep people anticipating. My favorite was room 2 with the flowers. I personally am drawn to the elegance and beauty that flower symbolizes.</div>     
+    
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/Week 2/day9-dior.jpeg" alt= "dior">
+                        <img src="images/Week 2/day9-dior2.jpeg" alt="dior">
+                        <img src="images/Week 2/day9-dior3.jpeg" alt="dior">
+                        <img src="images/Week 2/day9-dior4.jpeg" alt="dior">
+                        <img src="images/Week 2/day9-dior5.jpeg" alt="dior">
+                        <img src="images/Week 2/day9-dior6.jpeg" alt="dior">
+                        <img src="images/Week 2/day9-dior7.jpeg" alt="dior">
+                        <img src="images/Week 2/day9-dior8.jpeg" alt="dior">
+                    </div>
+                    <button class="carousel-button prev">❮</button>
+                    <button class="carousel-button next">❯</button>
+                </div>
+                <div class="carousel-desc">
+                    The Dior Museum was truly amazing. We not only were able to see Christain Dior's 
+                    upbringing but also his ideals and what he wanted for women fashion. I also 
+                    loved to see all the different creative directors and their unique vision for 
+                    what dior is. I am especially a fan of Galliano (and his work in the Enchanted
+                    Garden room). His extensive use of Chinese motifs is quite interesting to me. 
+                    The "prototype" room with the perfume booth was also cool, to just engage with 
+                    how the fabric draped and worked to form different shapes.
+                </div>
+            </div>
+
         </div>
+
     </div>
 
     <script>
@@ -388,48 +429,6 @@
             window.addEventListener('resize', updateCarousel);
             updateCarousel(); // Initialize
                });
-        });
-
-        // Read More/Less functionality
-        function toggleReadMore(descId) {
-            const descElement = document.getElementById(descId);
-            const button = descElement.querySelector('.read-more-btn');
-            
-            if (descElement.classList.contains('truncated')) {
-                // Expand the description
-                descElement.classList.remove('truncated');
-                descElement.classList.add('expanded');
-                button.textContent = 'Read Less';
-            } else {
-                // Collapse the description
-                descElement.classList.remove('expanded');
-                descElement.classList.add('truncated');
-                button.textContent = 'Read More';
-                
-                // Optionally scroll back to the top of the description
-                descElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-        }
-        
-        // Auto-detect if content needs "Read More" button
-        document.addEventListener('DOMContentLoaded', function() {
-            const descriptions = document.querySelectorAll('.carousel-desc');
-            
-            descriptions.forEach(desc => {
-                const content = desc.querySelector('.desc-content');
-                const button = desc.querySelector('.read-more-btn');
-                
-                // Temporarily expand to measure full height
-                desc.style.height = 'auto';
-                const fullHeight = desc.scrollHeight;
-                desc.style.height = ''; // Reset to CSS height
-                
-                // If content fits within the truncated height, hide the button
-                if (fullHeight <= 225) { // Match the truncated height from CSS
-                    button.style.display = 'none';
-                    desc.classList.remove('truncated');
-                }
-            });
         });
 
     </script>   

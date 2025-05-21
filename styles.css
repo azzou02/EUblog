@@ -99,8 +99,9 @@ nav a {
 
 .media-block img,
 .media-block video {
+    object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 380px;
     border-radius: 10px;
 }
 
