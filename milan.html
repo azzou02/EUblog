@@ -83,17 +83,67 @@
 
     <div class="responsive">
         <h2>Day 18 (5/30) - Presentation + Farewell Dinner</h2>
-        <div class="gallery">
-            <div class="media-block">
-                <img src="images/" alt="Lost" width="600" height="400">
-                <div class="desc"></div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="images/Milan/day18-dinner1.jpeg" alt= "10">
+                    <img src="images/Milan/day18-dinner2.jpeg" alt= "10">
+                    <img src="images/Milan/day18-dinner3.jpeg" alt= "10">
+                    <img src="images/Milan/day18-dinner4.jpeg" alt= "10">
+                    <img src="images/Milan/day18-restaurant.jpeg" alt= "10">
+                </div>
+                <button class="carousel-button prev">❮</button>
+                <button class="carousel-button next">❯</button>
             </div>
-            <div class="media-block">
-                <img src="images/" alt="Il Ganzo" width="600" height="400">
-                <div class="desc"></div>
+            <div class="carousel-desc">
+                Our final dinner! It was great getting to learn everything about fashion, business, 
+                and sustainability and meeting eveyone in the class. The Dior museum was especially 
+                captivating. Best maymester ever :D
+            </div>
+
+            <div class="carousel">
+                <div class="carousel-images">
+                    <video src="images/Milan/day18-train.mp4" alt="original experience" width="500" height="600" controls>
+                </div>
+            </div>
+            <div class="carousel-desc">
+                A funny original experience in the Metro to close off the trip.
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const carousels = document.querySelectorAll('.carousel');
+
+        carousels.forEach(carousel => {
+            const imagesContainer = carousel.querySelector('.carousel-images');
+            const images = imagesContainer.querySelectorAll('img');
+            const prevButton = carousel.querySelector('.carousel-button.prev');
+            const nextButton = carousel.querySelector('.carousel-button.next');
+            let index = 0;
+
+            function updateCarousel() {
+               const width = images[0].clientWidth;
+               imagesContainer.style.transform = `translateX(${-index * width}px)`;
+            }
+
+            nextButton.addEventListener('click', () => {
+               index = (index + 1) % images.length;
+               updateCarousel();
+            });
+
+            prevButton.addEventListener('click', () => {
+               index = (index - 1 + images.length) % images.length;
+               updateCarousel();
+            });
+
+            window.addEventListener('resize', updateCarousel);
+            updateCarousel(); // Initialize
+               });
+        });
+
+    </script> 
 
 </body>
 </html>
